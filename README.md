@@ -1,4 +1,4 @@
-# Application sur Windows Azure 
+# Application - Windows Azure 
 https://henri-potier-lib.azurewebsites.net/#/dashboard
 
 # HenriPotierLib
