@@ -23,21 +23,20 @@ export class BooksComponent implements OnInit {
 
   searchTitle = "";
   cartNumberOfProduct = 0;
-
   titleBook = "";
 
   getBooks(): void {
-    this.bookService.getBooks().subscribe(books => this.books = books.filter(x => x.title.search(this.searchTitle) != -1));
+      this.bookService.getBooks().subscribe(books => this.books = books.filter(x => x.title.search(this.searchTitle) != -1));
   }
 
   onSubmit() {
-    this.getBooks();
+      this.getBooks();
   }
 
   addToLocalStorage(title:string, isbn:string, price:String) {
-    this.cartNumberOfProduct = this.cartNumberOfProduct+1;
-    localStorage.setItem("cartNumberOfProductItem", this.cartNumberOfProduct.toString());
-    localStorage.setItem("product_"+this.cartNumberOfProduct, title+"#"+isbn+"#"+price);
+      this.cartNumberOfProduct = this.cartNumberOfProduct+1;
+      localStorage.setItem("cartNumberOfProductItem", this.cartNumberOfProduct.toString());
+      localStorage.setItem("product_"+this.cartNumberOfProduct, title+"#"+isbn+"#"+price);
   }
 
   emptyCart() {
