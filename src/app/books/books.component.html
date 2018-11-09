@@ -1,0 +1,60 @@
+
+<div align="center">
+
+<div id="header">
+    <div align="center">
+        <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <input type="text" class="form-control" formControlName="searchBook" [(ngModel)]="searchTitle" placeholder="Search for...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="submit">Go!</button>
+                    </span>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <br>
+    <div>
+        <a href="cart"><button type="button" class="btn btn-secondary btn-lg">Panier : {{cartNumberOfProduct}}</button></a>
+        &nbsp;&nbsp;&nbsp;
+        <button type="button" (click) = 'emptyCart()' class="btn btn-secondary btn-lg">Vider le panier</button>
+    </div>
+
+</div>
+
+<br>
+<form>
+<article *ngFor="let book of books" class="bookDiv colorDiv">
+    <br>
+    <div class="row"> 
+        <div class="col-sm">
+            <img src="{{book.cover}}" class="bookImg">
+        </div>
+        <div class="col-sm">
+            <h3>{{book.title}}</h3><br>
+            <h5>isbn: "{{book.isbn}}"</h5><br>
+            <div class="d-md-none d-lg-block d-sm-none d-md-block d-none d-sm-block">
+                <p class="pjustif">
+                    "Après la mort de ses parents (Lily et James Potier), Henri est recueilli par sa tante Pétunia (la sœur de Lily) et son oncle Vernon à l'âge d'un an. Ces derniers, animés depuis toujours d'une haine féroce envers les parents du garçon qu'ils qualifient de gens « bizarres », voire de « monstres », traitent froidement leur neveu et demeurent indifférents aux humiliations que leur fils Dudley lui fait subir. Henri ignore tout de l'histoire de ses parents ...."
+                </p>
+            </div>
+        </div>
+        <div class="col-sm">
+            <h3>Prix : {{book.price}} &euro;</h3><br>
+            <input type="hidden" name="titleBook" class="form-control"  #titleInput value="{{book.title}}">
+            <input type="hidden" name="isbnBook" class="form-control" #isbnInput value="{{book.isbn}}">
+            <input type="hidden" name="priceBook" class="form-control" #priceInput value="{{book.price}}">
+            
+            <button type="submit" (click) = 'addToLocalStorage(titleInput.value, isbnInput.value, priceInput.value)' class="btn btn-warning">Acheter</button>
+            &nbsp;&nbsp;&nbsp;
+            <a href="cart"><button type="button" class="btn btn-secondary">Panier : {{cartNumberOfProduct}}</button></a>
+            <br>
+        </div>
+    </div>
+    <br>
+</article>
+</form>
+
+</div>

@@ -1,0 +1,32 @@
+.colorDiv:nth-of-type(odd) {
+    background-color:#FCFAE1;
+}
+
+bookDiv {
+    padding: 20px;
+}
+
+.pjustif {
+    text-align:justify;
+ }
+
+@media (max-width: 768px) {
+    .bookImg {
+        width: 60%;
+        height: 90%;
+    }
+}
+    
+@media only screen and (min-width: 769px) {
+    .bookImg {
+        width: 60%;
+        height: 70%;
+    }
+}
+    
+@media only screen and (min-width: 1200px) {
+    .bookImg {
+        width: 60%;
+        height: 90%;
+    }
+}

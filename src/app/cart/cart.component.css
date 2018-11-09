@@ -1,0 +1,7 @@
+.colorDiv:nth-of-type(odd) {
+    background-color:#FCFAE1;
+}
+
+bookDiv {
+    padding: 20px;
+}

@@ -1,0 +1,21 @@
+
+.title-app {
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+
+footer {
+    background-color: rgb(185, 183, 183);
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+img {
+    max-width: 100%;
+    width: auto \9;
+    height: auto;
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}

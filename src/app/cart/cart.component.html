@@ -1,0 +1,30 @@
+
+<div align="center">
+        
+<br>
+<div>
+   <a href="dashboard"><button type="button" class="btn btn-secondary btn-lg">Rechercher</button></a>
+</div>
+
+<div *ngFor="let book of books" class="bookDiv colorDiv">
+    <hr>
+        <div class="row">
+            <div class="col">
+                <h5>{{book.title}}</h5><br>
+                <h6>isbn: "{{book.isbn}}"</h6><br>
+                <h5>Prix: {{book.price}} &euro;</h5>
+            </div>
+        </div>
+</div>
+
+<div>
+    <br><hr>
+    <h4>Prix Totale : {{totalPrice}} &euro;</h4>
+    <h5>Réduction : {{offreReduction}} &euro;</h5>
+    <h3>Totla Aprés Réduction : {{totalAfterReduction}} &euro;</h3>
+    <br> &nbsp;&nbsp;&nbsp;
+    <a href=""><button type="button" class="btn btn-secondary btn-lg">Payer</button></a>
+    <br><hr><br>
+</div>
+
+</div>
